@@ -13,7 +13,7 @@ public class MasterCard extends CreditCard {
 	
 	public static boolean validNumber(String n) {
 		if(n.length() != 16) { return false; }
-		if(!n.substring(0, 1).equals("5")) { return false; }
+		if(!n.substring(0, 1).equals("5") && !n.substring(0, 1).equals("2")) { return false; }
 		
 		boolean secondCharValid = false;
 		if(n.substring(1, 2).equals("1")) { secondCharValid = true; }  
